@@ -19,14 +19,19 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 
+gem 'devise'
+
 group :test, :development do
   gem "rspec-rails", "~> 2.4"
 end
 
 group :test do
+  gem "factory_girl_rails"
   gem 'mongoid-rspec'
   gem 'database_cleaner'
   gem "guard-rspec"
+  gem "spork", "> 0.9.0.rc"
+  gem "guard-spork"
 end
 
 group :development do
