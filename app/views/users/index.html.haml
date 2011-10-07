@@ -1,0 +1,19 @@
+%h1 Listing users
+
+%h3= pluralize(@users.count, "User") 
+
+%table
+  %tr
+    %th
+      Username
+    %th
+      Email
+    %th
+
+  - @users.each do |user|
+    %tr
+      %td= user.username
+      %td= user.email
+      %td= link_to "show", user
+
+%br
