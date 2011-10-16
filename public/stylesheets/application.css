@@ -1,0 +1,5 @@
+/* line 8, ../../app/assets/stylesheets/application.sass */
+body {
+  background: white url("tile.png") repeat;
+  font-family: "Nova Slim";
+}

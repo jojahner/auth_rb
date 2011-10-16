@@ -19,6 +19,8 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 
+gem 'compass'
+
 gem 'devise'
 gem 'cancan'
 

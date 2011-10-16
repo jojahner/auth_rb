@@ -1,0 +1,6 @@
+en:
+  shared:
+    login:
+      login: "Login (username or email)"
+      password: "Password"
+      submit: "Login"

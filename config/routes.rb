@@ -1,8 +1,8 @@
 Auth::Application.routes.draw do  
-  root :to => 'users#index'
+  root to: 'home#index'
   
   devise_for :users  
-  resources :users, :only => [:index, :show]
+  resources :users, only: [:index, :show]
   
   # Oauth2 provider routes
   match '/auth/authorize'
