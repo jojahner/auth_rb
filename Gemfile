@@ -19,7 +19,7 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 
-gem 'compass'
+gem 'compass', '~> 0.12.alpha'
 
 gem 'devise'
 gem 'cancan'
