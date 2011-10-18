@@ -1,7 +1,13 @@
-%p#notice= notice
+#profile
+  %h1{class: ("admin" if @user.admin?)}
+    #{@user.username}'s profile
 
-= @user.username
-= @user.email
+  %dl
+    %dt Username:
+    %dd= @user.username
+    %dt Email:
+    %dd= @user.email
 
-%br
-= link_to 'Back', users_path
+  #nav
+    = link_to 'Edit', edit_user_registration_path
+    = link_to 'Logout', destroy_user_session_path, :method => :delete
