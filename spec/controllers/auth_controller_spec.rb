@@ -3,7 +3,7 @@ require 'spec_helper'
 describe AuthController do
   describe "#authorize" do
     before(:each) do
-      sign_in Factory.create(:user)
+      login_user Factory.create(:user)
       get :authorize, :redirect_uri => "http://example.com/callback"
     end
     
@@ -27,7 +27,7 @@ describe AuthController do
   describe "#user" do
     before(:each) do
       @user = Factory.create(:user)
-      sign_in @user
+      login_user @user
       @expected = {
         :provider => 'homi_id',
         :id       => @user.id,

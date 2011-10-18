@@ -9,5 +9,4 @@
     %dd= @user.email
 
   #nav
-    = link_to 'Edit', edit_user_registration_path
-    = link_to 'Logout', destroy_user_session_path, :method => :delete
+    = link_to 'Logout', destroy_session_path, :method => :delete

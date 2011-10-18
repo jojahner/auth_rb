@@ -1,5 +1,5 @@
 class AuthController < ApplicationController
-  before_filter :authenticate_user!, :except => [:access_token]
+  before_filter :require_login, :except => [:access_token]
   skip_before_filter :verify_authenticity_token, :only => [:access_token]
   
   def authorize
@@ -8,11 +8,12 @@ class AuthController < ApplicationController
   
   def access_token
     hash = {
+      # token generieren und speichern (user, application) => tokens
+      
       :access_token  => "#{SecureRandom.hex(16)}", 
       :refresh_token => "#{SecureRandom.hex(16)}", 
-      :expires_in    => Devise.timeout_in.to_i
+      :expires_in    => 10
     }
-    
     render :json => hash.to_json
   end
   

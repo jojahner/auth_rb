@@ -3,7 +3,23 @@
 // the top of the compiled file, but it's generally better to create a new file per style scope.
 //= require_self
 //= require_tree . 
+@import compass/css3, compass/utilities
 
 body
   background: #fff url(asset_path('tile.png', image)) repeat
   font-family: 'Nova Slim'
+
+  #flash
+    text-align: center
+    span
+      +border-radius(10px)
+      display: inline-block
+      border: 1px solid #B3B3B3
+      background: #E6E6E6
+      padding: 5px
+      margin: 0 0 5px 0
+      
+      &.alert
+        color: #800000
+      &.notice
+        color: #008040

@@ -21,7 +21,7 @@ gem 'haml-rails'
 
 gem 'compass', '~> 0.12.alpha'
 
-gem 'devise'
+gem 'sorcery'
 gem 'cancan'
 
 group :test, :development do

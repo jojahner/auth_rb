@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :require_login
 
   # GET /users
   # GET /users.json

@@ -33,7 +33,7 @@ Spork.prefork do
     end
 
     config.include Mongoid::Matchers
-    config.include Devise::TestHelpers, :type => :controller
+    config.include Sorcery::TestHelpers::Rails, :type => :controller
   end
 end
 
