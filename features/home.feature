@@ -9,8 +9,8 @@ Feature: Visit Home
       | testuser | user@email.com | secret   |
     Given I am a guest
     When  I go to root page
-     And  I fill in 'user_login' with 'testuser'
-     And  I fill in 'user_password' with 'secret'
+     And  I fill in 'login' with 'testuser'
+     And  I fill in 'password' with 'secret'
      And  I press 'Login'
     Then  I should be on my profile page
 
@@ -20,7 +20,7 @@ Feature: Visit Home
       | testuser | user@email.com | secret   |
     Given I am a guest
     When  I go to root page
-     And  I fill in 'user_login' with 'user@email.com'
-     And  I fill in 'user_password' with 'secret'
+     And  I fill in 'login' with 'user@email.com'
+     And  I fill in 'password' with 'secret'
      And  I press 'Login'
     Then  I should be on my profile page
