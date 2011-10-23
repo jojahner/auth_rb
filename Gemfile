@@ -35,11 +35,11 @@ group :test do
   gem "guard-rspec"
   gem "spork", "> 0.9.0.rc"
   gem "guard-spork"
-  gem 'cucumber-rails'
   gem 'capybara'
 end
 
 group :development do
+  gem 'letter_opener'
   gem 'powder'
 end
 
