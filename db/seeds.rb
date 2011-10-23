@@ -10,5 +10,15 @@
 User.create!(
   username: 'admin',
   email:    'admin@localhost.de',
-  password: 'password'
+  password: 'password',
+  admin:    true
 )
+
+# Create sample application
+
+Application.create!(
+  name:       'Sample Application',
+  key:        'some_key',
+  secret_key: 'some_secret_key'
+)
+
